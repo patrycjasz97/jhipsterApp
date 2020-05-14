@@ -40,6 +40,19 @@ public class CacheConfiguration {
             createCache(cm, com.pdio.jhipsterapp.domain.User.class.getName());
             createCache(cm, com.pdio.jhipsterapp.domain.Authority.class.getName());
             createCache(cm, com.pdio.jhipsterapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.pdio.jhipsterapp.domain.MyEntity.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Region.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Country.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Location.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Department.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Department.class.getName() + ".employees");
+            createCache(cm, com.pdio.jhipsterapp.domain.Task.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Task.class.getName() + ".jobs");
+            createCache(cm, com.pdio.jhipsterapp.domain.Employee.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Employee.class.getName() + ".jobs");
+            createCache(cm, com.pdio.jhipsterapp.domain.Job.class.getName());
+            createCache(cm, com.pdio.jhipsterapp.domain.Job.class.getName() + ".tasks");
+            createCache(cm, com.pdio.jhipsterapp.domain.JobHistory.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

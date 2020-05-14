@@ -1,0 +1,31 @@
+{
+  "jhipsterApp": {
+    "myEntity": {
+      "home": {
+        "title": "My Entity",
+        "createLabel": "Dodaj My Entity",
+        "createOrEditLabel": "Dodaj lub edytuj: My Entity",
+        "notFound": "No My Entities found"
+      },
+      "created": "Utworzono nowy obiekt typu My Entity z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu My Entity z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu My Entity z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć My Entity {{ id }}?"
+      },
+      "detail": {
+        "title": "My Entity"
+      },
+      "jhPoleID": "Jh Pole ID",
+      "jhPoleNazwa": "Jh Pole Nazwa",
+      "jhJakasLiczba": "Jh Jakas Liczba",
+      "jhData": "Jh Data",
+      "jhBoolean": "Jh Boolean",
+      "jhLong": "Jh Long",
+      "jhBigDecimal": "Jh Big Decimal",
+      "jhDouble": "Jh Double",
+      "jhZonedDT": "Jh Zoned DT",
+      "jhInstant": "Jh Instant"
+    }
+  }
+}

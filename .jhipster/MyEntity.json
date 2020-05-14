@@ -1,0 +1,57 @@
+{
+    "name": "MyEntity",
+    "fields": [
+        {
+            "fieldName": "jhPoleID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "jhPoleNazwa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "jhJakasLiczba",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "jhData",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "jhBoolean",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "jhLong",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "jhBigDecimal",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "jhDouble",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "jhZonedDT",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "jhInstant",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200514154600",
+    "entityTableName": "my_entity",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

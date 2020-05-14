@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="myEntity">
+            <h2><span jhiTranslate="jhipsterApp.myEntity.detail.title">My Entity</span> {{ myEntity.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhPoleID">Jh Pole ID</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhPoleID }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhPoleNazwa">Jh Pole Nazwa</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhPoleNazwa }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhJakasLiczba">Jh Jakas Liczba</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhJakasLiczba }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhData">Jh Data</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhData }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhBoolean">Jh Boolean</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhBoolean }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhLong">Jh Long</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhLong }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhBigDecimal">Jh Big Decimal</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhBigDecimal }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhDouble">Jh Double</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhDouble }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhZonedDT">Jh Zoned DT</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhZonedDT }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.myEntity.jhInstant">Jh Instant</span></dt>
+                <dd>
+                    <span>{{ myEntity.jhInstant }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/my-entity', myEntity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
