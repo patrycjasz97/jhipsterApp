@@ -1,0 +1,79 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterApp.myEntity.home.title">My Entities</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-my-entity" [routerLink]="['/my-entity/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="jhipsterApp.myEntity.home.createLabel">
+            Create a new My Entity
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="myEntities?.length === 0">
+        <span jhiTranslate="jhipsterApp.myEntity.home.notFound">No myEntities found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="myEntities?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhPoleID">Jh Pole ID</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhPoleNazwa">Jh Pole Nazwa</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhJakasLiczba">Jh Jakas Liczba</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhData">Jh Data</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhBoolean">Jh Boolean</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhLong">Jh Long</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhBigDecimal">Jh Big Decimal</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhDouble">Jh Double</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhZonedDT">Jh Zoned DT</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.myEntity.jhInstant">Jh Instant</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let myEntity of myEntities ;trackBy: trackId">
+                    <td><a [routerLink]="['/my-entity', myEntity.id, 'view']">{{ myEntity.id }}</a></td>
+                    <td>{{ myEntity.jhPoleID }}</td>
+                    <td>{{ myEntity.jhPoleNazwa }}</td>
+                    <td>{{ myEntity.jhJakasLiczba }}</td>
+                    <td>{{ myEntity.jhData | date:'mediumDate' }}</td>
+                    <td>{{ myEntity.jhBoolean }}</td>
+                    <td>{{ myEntity.jhLong }}</td>
+                    <td>{{ myEntity.jhBigDecimal }}</td>
+                    <td>{{ myEntity.jhDouble }}</td>
+                    <td>{{ myEntity.jhZonedDT | date:'medium' }}</td>
+                    <td>{{ myEntity.jhInstant | date:'medium' }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/my-entity', myEntity.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/my-entity', myEntity.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(myEntity)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

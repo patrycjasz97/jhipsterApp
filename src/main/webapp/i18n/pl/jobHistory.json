@@ -1,0 +1,27 @@
+{
+  "jhipsterApp": {
+    "jobHistory": {
+      "home": {
+        "title": "Job History",
+        "createLabel": "Dodaj Job History",
+        "createOrEditLabel": "Dodaj lub edytuj: Job History",
+        "notFound": "No Job Histories found"
+      },
+      "created": "Utworzono nowy obiekt typu Job History z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Job History z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Job History z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Job History {{ id }}?"
+      },
+      "detail": {
+        "title": "Job History"
+      },
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "language": "Language",
+      "job": "Job",
+      "department": "Department",
+      "employee": "Employee"
+    }
+  }
+}
